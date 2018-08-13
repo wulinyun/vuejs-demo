@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: docker-vuejs-demo
+  name: docker-vuejs-demo
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: docker-vuejs-demo
+  type: NodePort
+
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: docker-vuejs-demo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: docker-vuejs-demo
+    spec:
+      containers:
+      - name: docker-vuejs-demo
+        image: harbor.landaudev.com/demo/docker-vuejs-demo
+        ports:
+        - containerPort: 80
+
