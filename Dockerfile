@@ -1,4 +1,5 @@
-#导入nginx镜像FROM nginx:1.13.7
+#导入nginx镜像
+FROM nginx:1.13.7
 MAINTAINER wulinyun <lin.wu@landasoft.com>
 #把当前打包工程的html复制到虚拟地址
 ADD ./dist /usr/share/nginx/html
