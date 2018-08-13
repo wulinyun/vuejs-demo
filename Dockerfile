@@ -1,7 +1,7 @@
 #导入nginx镜像FROM nginx:1.13.7
 MAINTAINER wulinyun <lin.wu@landasoft.com>
 #把当前打包工程的html复制到虚拟地址
-ADD ./app /usr/share/nginx/html
+ADD ./dist /usr/share/nginx/html
 #使用自定义nginx.conf配置端口和监听
 COPY nginx.conf /etc/nginx/nginx.conf
 ENV TZ=Asia/Shanghai
