@@ -1,0 +1,9 @@
+---
+applications:
+- name: landa-ma-vuejsdemo-dev
+  memory: 1024M
+  host: landa-ma-vuejsdemo-dev
+  domain: landaudev.com
+  buildpack: staticfile_buildpack
+  env:
+    TZ: Asia/Shanghai
