@@ -2,28 +2,28 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    name: docker-vuejs-demo
-  name: docker-vuejs-demo
+    name: docker-vuejs-demo-ingress
+  name: docker-vuejs-demo-ingress
 spec:
   ports:
     - port: 80
   selector:
-    app: docker-vuejs-demo
+    app: docker-vuejs-demo-ingress
 
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: docker-vuejs-demo
+  name: docker-vuejs-demo-ingress
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: docker-vuejs-demo
+        app: docker-vuejs-demo-ingress
     spec:
       containers:
-      - name: docker-vuejs-demo
+      - name: docker-vuejs-demo-ingress
         image: harbor.k8s.landaudev.com/demo/docker-vuejs-demo
         ports:
         - containerPort: 80
@@ -32,14 +32,14 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: docker-vuejs-demo
+  name: docker-vuejs-demo-ingress
 spec:
   rules:
-  - host: docker-vuejs-demo.k8s.landaudev.com
+  - host: docker-vuejs-demo-ingress.k8s.landaudev.com
     http:
       paths:
       - path: /
         backend:
-          serviceName: docker-vuejs-demo
+          serviceName: docker-vuejs-demo-ingress
           servicePort: 80
 
