@@ -1,6 +1,7 @@
 ---
 applications:
 - name: landa-ma-vuejsdemo-test
+  path: ./dist/  #vuejs构建的静态资源目录
   memory: 1024M
   host: landa-ma-vuejsdemo-test
   domain: landaudev.com
