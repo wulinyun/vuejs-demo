@@ -6,7 +6,7 @@ applications:
   host: landa-ma-vuejsdemo-dev
   domain: landaudev.com
   docker: 
-    image: harbor.landaudev.com/demo/docker-vuejs-demo:lastest
+    image: harbor.landaudev.com/demo/docker-vuejs-demo:latest
     username: admin #harbor私有镜像仓库用户名
   env:
     TZ: Asia/Shanghai
