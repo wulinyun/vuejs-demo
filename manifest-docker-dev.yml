@@ -1,0 +1,14 @@
+---
+applications:
+- name: landa-ma-vuejsdemo-dev
+#  path: ./dist/  #vuejs构建的静态资源目录
+  memory: 1024M
+  host: landa-ma-vuejsdemo-dev
+  domain: landaudev.com
+  docker: 
+    image: harbor.landaudev.com/demo/docker-vuejs-demo:lastest
+    username: admin #harbor私有镜像仓库用户名
+  env:
+    TZ: Asia/Shanghai
+#在执行cf命令的终端设置harbor私有镜像仓库密码在环境变量 
+#export CF_DOCKER_PASSWORD=landa 
