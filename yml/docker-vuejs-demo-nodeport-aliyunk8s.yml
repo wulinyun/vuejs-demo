@@ -25,6 +25,8 @@ spec:
       labels:
         app: docker-vuejs-demo
     spec:
+      imagePullSecrets: 
+      - name: landa-harbor-secret
       containers:
       - name: docker-vuejs-demo
         image: harbor.landaudev.com/demo/docker-vuejs-demo

@@ -22,6 +22,8 @@ spec:
       labels:
         app: docker-vuejs-demo-ingress
     spec:
+      imagePullSecrets: 
+      - name: landa-harbor-secret
       containers:
       - name: docker-vuejs-demo-ingress
         image: harbor.landaudev.com/demo/docker-vuejs-demo
