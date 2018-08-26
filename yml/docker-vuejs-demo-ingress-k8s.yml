@@ -24,7 +24,8 @@ spec:
     spec:
       containers:
       - name: docker-vuejs-demo-ingress
-        image: harbor.k8s.landaudev.com/demo/docker-vuejs-demo
+        image: harbor.landaudev.com/demo/docker-vuejs-demo
+        #image: harbor.k8s.landaudev.com/demo/docker-vuejs-demo
         ports:
         - containerPort: 80
 
