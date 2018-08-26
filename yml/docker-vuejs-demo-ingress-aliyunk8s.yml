@@ -38,7 +38,7 @@ metadata:
   name: docker-vuejs-demo-ingress
 spec:
   rules:
-  - host: docker-vuejs-demo-ingress.k8s.landaudev.com
+  - host: docker-vuejs-demo-ingress.alik8s.landaudev.com
     http:
       paths:
       - path: /
