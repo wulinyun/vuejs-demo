@@ -29,7 +29,7 @@ spec:
       - name: landa-harbor-secret
       containers:
       - name: docker-vuejs-demo
-        image: harbor.landaudev.com:7649/demo/docker-vuejs-demo
+        image: registry.cn-hangzhou.aliyuncs.com/landa-ma/docker-vuejs-demo:latest
         #image: harbor.k8s.landaudev.com/demo/docker-vuejs-demo
         ports:
         - containerPort: 80
