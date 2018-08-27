@@ -22,9 +22,11 @@ spec:
       labels:
         app: docker-vuejs-demo-ingress
     spec:
+      imagePullSecrets: 
+      - name: landa-aliyun-secret
       containers:
       - name: docker-vuejs-demo-ingress
-        image: harbor.landaudev.com/demo/docker-vuejs-demo
+        image: registry.cn-shanghai.aliyuncs.com/landasoft/landa-ma:docker-vuejs-demo
         #image: harbor.k8s.landaudev.com/demo/docker-vuejs-demo
         ports:
         - containerPort: 80
