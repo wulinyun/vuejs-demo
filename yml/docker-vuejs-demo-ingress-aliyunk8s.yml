@@ -23,7 +23,7 @@ spec:
         app: docker-vuejs-demo-ingress
     spec:
       imagePullSecrets: 
-      - name: landa-harbor-secret
+      - name: landa-aliyun-secret
       containers:
       - name: docker-vuejs-demo-ingress
         image: registry.cn-shanghai.aliyuncs.com/landasoft/landa-ma:docker-vuejs-demo #推送到阿里的镜像

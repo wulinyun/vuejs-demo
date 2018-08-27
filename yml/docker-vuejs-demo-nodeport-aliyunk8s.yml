@@ -26,7 +26,7 @@ spec:
         app: docker-vuejs-demo
     spec:
       imagePullSecrets: 
-      - name: landa-harbor-secret
+      - name: landa-aliyun-secret
       containers:
       - name: docker-vuejs-demo
         image: registry.cn-shanghai.aliyuncs.com/landasoft/landa-ma:docker-vuejs-demo
